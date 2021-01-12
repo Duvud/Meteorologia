@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Baliza;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('balizas','BalizaController@index');
+Route::get('balizas/{baliza}','BalizaController@show');
+Route::post('balizas','BalizaController@store');
+Route::put('balizas/{baliza}','BalizaController@update');
+Route::delete('balizas/{baliza}','BalizaController@delete');

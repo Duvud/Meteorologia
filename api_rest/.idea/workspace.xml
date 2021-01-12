@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Models/Baliza.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610369641265</updated>
-      <workItem from="1610369642952" duration="9214000" />
+      <workItem from="1610369642952" duration="13174000" />
     </task>
     <servers />
   </component>

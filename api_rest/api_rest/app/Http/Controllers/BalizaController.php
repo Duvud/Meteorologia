@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class BalizaController extends Controller
 {
+    public static function procesarDatos($datos){
+
+    }
+
+
     //Devuelve todas las balizas
     public function index(){
         return Baliza::all();

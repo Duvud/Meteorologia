@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BalizaController;
 use App\Models\Baliza;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('balizas','BalizaController@index');
-Route::get('balizas/{baliza}','BalizaController@show');
-Route::post('balizas','BalizaController@store');
-Route::put('balizas/{baliza}','BalizaController@update');
-Route::delete('balizas/{baliza}','BalizaController@delete');
+Route::get('balizas',[BalizaController::class,'index']);
+Route::get('balizas/{baliza}',[BalizaController::class,'show']);
+Route::post('balizas',[BalizaController::class,'store']);
+Route::put('balizas/{baliza}',[BalizaController::class,'update']);
+Route::delete('balizas/{baliza}',[BalizaController::class,'delete']);

@@ -26,21 +26,17 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
+            $fechaActual = date("d/m/Y");
             $nombres = ["Higer","Oiartzun","Jaizubia","Santa%20Clara","Txomin%20Enea","Martutene","Miramon","Lasarte","Andoain","Ereñozu","Puerto%20de%20Pasaia","Aitzu"];
             for ($i =0; $i<count($nombres);$i++){
-                $url = "https://www.euskalmet.euskadi.eus/s07-5853x/es/meteorologia/datos/graficasMeteogene.apl?e=5&nombre=Higer&fechasel=08/01/2021&R01HNoPortal=true";
+                $url = "https://www.euskalmet.euskadi.eus/s07-5853x/es/meteorologia/datos/graficasMeteogene.apl?e=5&nombre=$nombres[i]&fechasel=$fechaActual&R01HNoPortal=true";
                 $curl = curl_init($url);
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
                 $resp = curl_exec($curl);
                 if (preg_match('/arrayDatos=([^;]+)/',$resp,$matches)) {
-                    BalizaController::procesarDatos($matches[1]);
-                    return "actualizado";
-                }
-                else {
-                    return "no match";
+                    BalizaController::procesarDatos($nombres[$i],$matches[1]);
                 }
             }
-
         })->everyTenMinutes();
     }
 

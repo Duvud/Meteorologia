@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/api_rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_rest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/api_rest/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/api_rest/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/api_rest/vendor/phpdocumentor/reflection-common" />
@@ -131,63 +110,10 @@
       <path value="$PROJECT_DIR$/api_rest/vendor/psr/event-dispatcher" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1mvMVecpxALWEtcxaQdoXHrGOMI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/prueba.php" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\repo\Meteorologia\api_rest\api_rest\app\Http\Controllers" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="" />
-      <created>1610369641265</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1610369641265</updated>
-      <workItem from="1610369642952" duration="24597000" />
-      <workItem from="1610828650969" duration="890000" />
-      <workItem from="1610832070538" duration="2954000" />
-      <workItem from="1610875453837" duration="12665000" />
-      <workItem from="1610906428427" duration="7441000" />
-      <workItem from="1610964826390" duration="8662000" />
-      <workItem from="1610989911515" duration="2951000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/api_rest/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>

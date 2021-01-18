@@ -17,8 +17,8 @@ class CreateBalizasTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('temperatura');
+            $table->string('precipitacion');
             $table->string('humedad');
-            $table->string('vel_aire');
             $table->integer('minutos');
             $table->timestamps();
         });

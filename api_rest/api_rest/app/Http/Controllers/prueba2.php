@@ -1,13 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+//namespace App\Http\Controllers;
 
-use App\Models\Baliza;
-use Illuminate\Http\Request;
-
-class BalizaController extends Controller
-{
-    public static function obtenerDatos()
-    {
+class prueba2 /*extends Controller*/{
+    public static function obtenerDatos(){
         //Strings utilizados para los replace
 
         $sReplace1 = '[
@@ -99,44 +94,9 @@ $nombresBalizas =
             }
         }
     }
-    public static function procesarDatos($nombre, $datos, $countRegistros){
-            $minutos = $countRegistros * 10; //Aquí vamos a almacenar el minuto del dia al que pertenece la última lectura
-            $baliza = (new Baliza)->updateOrCreate([
-               'nombre' => $nombre,
-               'temperatura' => $datos[2],
-               'precipitacion' => $datos[0],
-               'humedad' => $datos[3],
-                'minutos' => $minutos
-            ]);
-            return "ok";
-    }
 
-
-    //Devuelve todas las balizas
-    public function index(){
-        return Baliza::all();
-    }
-
-    //Muestra una baliza
-    public function show(Baliza $baliza){
-        return $baliza;
-    }
-
-    //Almacena una baliza
-    public function store(Request $request){
-        $baliza = Baliza::create($request->all());
-        return response()->json($baliza,201);
-    }
-
-    //Cambia los datos de una baliza por otra
-    public function update(Request $request, Baliza $baliza){
-        $baliza->update($request->all());
-        return response()->json($baliza);
-    }
-
-    //Elimina una baliza de la base de datos
-    public function delete(Baliza $baliza){
-        $baliza->delete();
-        return response()->json(null,204);
-    }
 }
+prueba2::obtenerDatos();
+?>
+
+

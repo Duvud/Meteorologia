@@ -2,9 +2,10 @@
 
 namespace App\Console;
 
-use App\Http\Controllers\BalizaController;
+use App\Http\Controllers\prueba2;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
 
 class Kernel extends ConsoleKernel
 {
@@ -25,19 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function () {
-            $fechaActual = date("d/m/Y");
-            $nombres = ["Higer","Oiartzun","Jaizubia","Santa%20Clara","Txomin%20Enea","Martutene","Miramon","Lasarte","Andoain","Ereñozu","Puerto%20de%20Pasaia","Aitzu"];
-            for ($i =0; $i<count($nombres);$i++){
-                $url = "https://www.euskalmet.euskadi.eus/s07-5853x/es/meteorologia/datos/graficasMeteogene.apl?e=5&nombre=$nombres[i]&fechasel=$fechaActual&R01HNoPortal=true";
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-                $resp = curl_exec($curl);
-                if (preg_match('/arrayDatos=([^;]+)/',$resp,$matches)) {
-                    BalizaController::procesarDatos($nombres[$i],$matches[1]);
-                }
-            }
-        })->everyTenMinutes();
+        $schedule->call(prueba2::obtenerDatos())->everyTenMinutes();
     }
 
     /**

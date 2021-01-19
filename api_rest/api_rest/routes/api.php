@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\BalizaController;
 use App\Models\Baliza;
 use Illuminate\Http\Request;

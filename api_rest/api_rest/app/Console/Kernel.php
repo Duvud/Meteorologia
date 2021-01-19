@@ -2,7 +2,9 @@
 
 namespace App\Console;
 
+use App\Http\Controllers\BalizaController;
 use App\Http\Controllers\prueba2;
+use App\Http\Controllers\prueba5;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -26,7 +28,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(prueba2::obtenerDatos())->everyTenMinutes();
+
+        $schedule->call(BalizaController::obtenerDatos())->everyTenMinutes();
     }
 
     /**

@@ -1,0 +1,15 @@
+/*Definimos un height para el div del mapa de leaflet*/
+#dMapa{
+    height: 60vh;
+    width: 60%;
+    margin: auto;
+    border: solid black 2px;
+}
+#dPaneles{
+    height: 30vh;
+    width: auto;
+    max-width: 80%;
+    margin: 5vh auto;
+    border: solid black 2px;
+    border-radius: 5px;
+}

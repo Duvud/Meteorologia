@@ -14,6 +14,6 @@ class Baliza extends Model
 {
     protected $primaryKey = 'id';
     protected $table = 'baliza';
-    protected $fillable = ['nombre','temperatura','humedad','vel_aire','minutos'];
+    protected $fillable = ['nombre','temperatura','humedad','precipitacion','minutos'];
     use HasFactory;
 }

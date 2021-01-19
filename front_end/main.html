@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+ En esta página meteré el mapa interactivo con leaflet con
+ el que crearé tambien un sistema de drag and drop para desplegar
+ paneles en los que salgan los datos de las diferentes balizas
+ que serán actualizadas de forma asíncrona con ajax
+ -->
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>MeteoMax - Balizas</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="datos.js"></script>
+
+</head>
+<body>
+    <h1>MeteoMax - Balizas</h1>
+    <h4>Mapa</h4>
+    <div id="dMapa"></div>
+    <h4>Paneles meteorológicos</h4>
+    <div id="dPaneles">
+    </div>
+    <script src="mapa.js"></script>
+</body>
+</html>

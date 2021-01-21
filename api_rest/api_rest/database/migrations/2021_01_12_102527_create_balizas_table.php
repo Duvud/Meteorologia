@@ -14,12 +14,15 @@ class CreateBalizasTable extends Migration
     public function up()
     {
         Schema::create('baliza', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
             $table->string('nombre');
-            $table->string('temperatura');
-            $table->string('precipitacion');
-            $table->string('humedad');
-            $table->integer('minutos');
+            $table->string('provincia');
+            $table->string('temperatura')->nullable();
+            $table->string('precipitacion')->nullable();
+            $table->float('humedad')->nullable();
+            $table->float('velocidad')->nullable();
+            $table->float('y');
+            $table->float('z');
             $table->timestamps();
         });
     }

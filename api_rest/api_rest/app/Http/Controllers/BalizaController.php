@@ -2,59 +2,125 @@
 namespace App\Http\Controllers;
 
 use App\Models\Baliza;
+use ArrayObject;
 use Illuminate\Http\Request;
+use Psy\Exception\ErrorException;
 
 class BalizaController extends Controller
 {
+    public static function cargarDatosExtra(): ArrayObject
+    {
+        $url = "https://euskalmet.beta.euskadi.eus/vamet/stations/stationList/stationList.json";
+        $jsonNombres = file_get_contents($url);
+        $jsonNombres = utf8_encode($jsonNombres);
+        $jsonNombres = json_decode($jsonNombres);
+        $arDatosExtra = new ArrayObject();
+        $i =0;
+        foreach($jsonNombres as $datosBaliza){
+
+            if($datosBaliza->stationType == "METEOROLOGICAL")
+                $arDatosExtra->append(array("id"=>$datosBaliza->id,"nombre"=>$datosBaliza->name,"provincia"=>$datosBaliza->province,"y"=>$datosBaliza->y,"z"=>$datosBaliza->x,"tipo"=>$datosBaliza->stationType));
+        }
+        return $arDatosExtra;
+    }
     public static function obtenerDatos()
     {
-        $fechaActual = date("d/m/Y");
-        //Nombres de balizas
-        $nombresBalizas=
-            [
-                "Abetxuko","Abetxuko-CHE","Abusu","Agauntza","Aitzu","Aixola","Aizarnazabal",
-                "Albaina","Alegia","Alegría","Almike (Bermeo)","Altube","Altzola","Ameraun",
-                "Amorebieta","Amundarain","Andoain","Antoñana","Añarbe","Aranguren","Araxes",
-                "Arboleda","Areta","Arkaute I","Arkauti","Arrasate","Arteaga","Baiko","Balmaseda",
-                "Behobia","Belauntza","Beluntza","Berastegi","Berna","Berriatua","Bidania","Cerroja",
-                "Derio","Deusto","Egino","Eibar","Eitzaga","Elorrio","Ereñozu","Eskas","Espejo",
-                "Estanda","Etura","Galdakao","Galindo","Gardea","Gazteiz","Gatika","Gorbea","Herrera",
-                "Higer","Ibai Eder","Igorre","Ilarduia","Iruzubieta","Iturrieta","Lurreta","Jaizkibel",
-                "Jaizubia","Kanpezu","Kapildui","La Garbea","La Merced","Larrainazubi","Lasarte","Mallabia",
-                "Mañaria","Mareógrafo Bermeo","Markina","Martutene","Matxinbenta","Matxitxako","Miramon",
-                "Moreda","Mungia","Mungia-Lauaxeta","Muxika","Navarrete","Oiartzun","Oiz","Olabarria","Oleta",
-                "Oñati","Ordizia","Ordunte","Orduña","Orozko","Otxandio","Ozaeta","Páganos","Pagoeta","Puerto de Bilbao",
-                "Puerto de Pasaia","Punta Galea","Roitegi","Salvatierra","San Prudentzio","Sangroniz","Santa Clara",
-                "Saratxo","Sarria","Sodupe-Cadagua","Sodupe-Herrerias","Subijana","Tobillas","Trebiño","Txomin Enea",
-                "Undurraga","Untzueta","Urkiola","Urkizu","Urkulu","Venta Alta","Zaldiaran","Zalla","Zambrana",
-                "Zaratamo","Zarautz","Zeanuri","Zegama","Zizurkil","Zurbano-Alegría-CHE"
-            ];
-        for ($i =0; $i<count($nombresBalizas);$i++){
-            $nombreURL = urlencode(utf8_decode($nombresBalizas[$i]));
-            $url = "https://www.euskalmet.euskadi.eus/s07-5853x/es/meteorologia/datos/graficasMeteogene.apl?e=5&nombre=$nombreURL&fechasel=$fechaActual&R01HNoPortal=true";
+        $balizas = self::cargarDatosExtra();
+        $nombres = [];
+        $temperatura = null;
+        $arrayDatosBalizas = [];
+        //Recogemos el json de la api de arroyo
+        $fechaActual = date("Y/m/d");
+        for($i=0;$i<count($balizas);$i++){
+            $datosFinal = [];
+            $temperatura = null;
+            $precipitacion = null;
+            $humedad = null;
+            $velocidad = null;
+            $idBaliza = $balizas[$i]["id"];
+            $url = "https://euskalmet.beta.euskadi.eus/vamet/stations/readings/$idBaliza/$fechaActual/readingsData.json";
 
-            require('domparser/simple_html_dom.php');
-            $html = file_get_html($url);
-            $table = $html->find('table');
+            try{
+                $jsonDatosBaliza = file_get_contents($url);
+            }catch(\ErrorException $e){
+                continue;
+            }
 
-            $rowHeader = array();
-            for($table->find('tr') as $row){
-                $meteo = array();
-                for($row->find('th') as $cell){
-                    $meteo[] = $cell->plaintext;
+            $jsonDatosBaliza = utf8_encode($jsonDatosBaliza);
+            $jsonDatosBaliza = json_decode($jsonDatosBaliza);
+
+            foreach ($jsonDatosBaliza as $datos){
+                if($datos->name == 'temperature'){
+                    foreach($datos->data as $row) {
+                        $ordenar = [];
+                        foreach ((array)$row as $key => $item) {
+                            array_push($ordenar, $key);
+                        }
+                        sort($ordenar);
+                        $row = json_encode($row);
+                        $row = json_decode($row, true);
+                        $temperatura =  $row[$ordenar[count($ordenar)-1]];
+
+                    }
                 }
-                $rowHeader[] = $meteo;
-            }
-            for($table->find('tr') as $row){
-                $meteo = array();
-                for($row->find('td') as $cell){
-                    $meteo[] = $cell->plaintext;
+                elseif($datos->name == 'precipitation') {
+                    foreach($datos->data as $row) {
+                        $ordenar = [];
+                        foreach ((array)$row as $key => $item) {
+                            array_push($ordenar, $key);
+                        }
+                        sort($ordenar);
+                        $row = json_encode($row);
+                        $row = json_decode($row, true);
+                        $precipitacion =  $row[$ordenar[count($ordenar)-1]];
+
+                    }
+                }elseif($datos->name == 'humidity') {
+                    foreach($datos->data as $row) {
+                        $ordenar = [];
+                        foreach ((array)$row as $key => $item) {
+                            array_push($ordenar, $key);
+                        }
+                        sort($ordenar);
+                        $row = json_encode($row);
+                        $row = json_decode($row, true);
+                        $humedad =  $row[$ordenar[count($ordenar)-1]];
+
+                    }
+                }elseif($datos->name == 'mean_speed') {
+                    foreach($datos->data as $row) {
+                        $ordenar = [];
+                        foreach ((array)$row as $key => $item) {
+                            array_push($ordenar, $key);
+                        }
+                        sort($ordenar);
+                        $row = json_encode($row);
+                        $row = json_decode($row, true);
+                        $velocidad =  $row[$ordenar[count($ordenar)-1]];
+                    }
                 }
-                $rowData[] = $meteo;
             }
-            print_r($rowHeader);
-            print_r($rowData);
+            $datosFinal = [$idBaliza,$balizas[$i]["nombre"],$balizas[$i]["provincia"],$temperatura,$precipitacion,$humedad,$velocidad,$balizas[$i]["y"],$balizas[$i]["z"]];
+            array_push($arrayDatosBalizas,$datosFinal);
         }
+        //print_r($arrayDatosBalizas);
+        self::procesarDatos($arrayDatosBalizas);
+    }
+
+    public static function procesarDatos($datosFinal){
+        foreach($datosFinal as $dato){
+            (new \App\Models\Baliza)->updateOrCreate(
+                [
+                    'id'=> $dato[0]
+                ],
+                [
+                    "nombre" => $dato[1] ,"provincia" => $dato[2], "temperatura" => $dato[3],
+                    'precipitacion' => $dato[4], 'humedad' => $dato[5], 'velocidad' => $dato[6],
+                    'y' => $dato[7], 'z' => $dato[8]
+                ]
+            );
+        }
+        //(new \App\Models\Baliza)->upsert($datosFinal,'id');
     }
 
     //Devuelve todas las balizas

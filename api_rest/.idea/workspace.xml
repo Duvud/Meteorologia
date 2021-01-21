@@ -2,143 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/example_advanced_selector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/example_basic_selector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/example_callback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/example_extract_html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/example_modify_contents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/scraping/example_scraping_digg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/scraping/example_scraping_general.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/scraping/example_scraping_imdb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/scraping/example_scraping_slashdot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/example/simple_html_dom_utility.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/custom_theme/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/constants.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/definitions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/file_get_html.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/__construct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/__destruct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/__get.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/__toString.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/as_text_node.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/childNodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/clear.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/copy_skip.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/copy_until.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/copy_until_char.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/createElement.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/createTextNode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/dump.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/find.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/firstChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/getElementById.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/getElementByTagName.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/getElementsById.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/getElementsByTagName.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/lastChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/link_nodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/load.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/loadFile.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/load_file.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/parse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/parse_attr.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/parse_charset.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/prepare.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/read_tag.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/remove_callback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/remove_noise.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/restore_noise.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/save.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/search_noise.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/set_callback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/simple_html_dom.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom/skip.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__construct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__destruct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__get.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__isset.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__set.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__toString.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/__unset.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/addClass.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/appendChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/childNodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/children.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/clear.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/convert_text.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/dump.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/dump_node.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/find.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/find_ancestor_tag.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/firstChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/first_child.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getAllAttributes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getAttribute.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getElementById.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getElementByTagName.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getElementsById.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/getElementsByTagName.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/get_display_size.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/hasAttribute.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/hasChildNodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/hasClass.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/has_child.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/innertext.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/is_utf8.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/lastChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/last_child.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/makeup.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/match.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/nextSibling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/next_sibling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/nodeName.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/outertext.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/parent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/parentNode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/parse_selector.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/prevSibling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/prev_sibling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/remove.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/removeAttribute.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/removeChild.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/removeClass.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/save.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/seek.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/setAttribute.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/simple_html_dom_node.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/text.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/simple_html_dom_node/xmltext.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/api/str_get_html.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/accessing-element-attributes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/adding-nodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/creating-dom-objects.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/customizing-parsing-behavior.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/finding-html-elements.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/saving-dom-objects.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/manual/traversing-dom-tree.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/quick-start.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/docs/requirements.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/extra.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/mkdocs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/manual/site/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/phpcompatibility.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/phpcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser/simple_html_dom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front_end/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front_end/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/prueba2.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/app/Models/Baliza.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Models/Baliza.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,10 +139,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_rest/app/Http/Controllers/domparser" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_rest/app/Http/Controllers/jsonparser" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -285,6 +156,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\repo\Meteorologia\api_rest\api_rest\app\Http\Controllers\jsonparser" />
       <recent name="C:\repo\Meteorologia\api_rest\api_rest\app\Http\Controllers\domparser" />
       <recent name="C:\repo\Meteorologia\api_rest\api_rest\app\Http\Controllers" />
       <recent name="C:\repo\Meteorologia\api_rest\api_rest" />
@@ -308,7 +180,7 @@
       <workItem from="1610906428427" duration="7441000" />
       <workItem from="1610964826390" duration="8662000" />
       <workItem from="1610989911515" duration="2951000" />
-      <workItem from="1611046185399" duration="14873000" />
+      <workItem from="1611046185399" duration="53056000" />
     </task>
     <servers />
   </component>

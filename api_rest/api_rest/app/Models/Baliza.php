@@ -12,8 +12,9 @@ use Illuminate\Database\Eloquent\Builder;
  */
 class Baliza extends Model
 {
+    public $incrementing = false;
     protected $primaryKey = 'id';
     protected $table = 'baliza';
-    protected $fillable = ['nombre','temperatura','humedad','precipitacion','minutos'];
+    protected $fillable = ['id','nombre','provincia','temperatura','precipitacion','humedad','velocidad','y','z'];
     use HasFactory;
 }

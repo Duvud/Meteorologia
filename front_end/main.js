@@ -1,1 +1,1 @@
-$(".leaflet.popup.content").ondrag(function(){});
+//$(".leaflet.popup.content").ondrag(function(){});

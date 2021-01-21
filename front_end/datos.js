@@ -8,12 +8,9 @@ function GetData (){
         },
         success: function (response){
             sData = response;
-            alert(sData[0].nombre);
+            GenerateMarkers();
         }
     });
 }
-
-
-
-//GetData();
-//setInterval(GetData,5000);
+GetData();
+setInterval(GetData,1000 * 60 * 10);

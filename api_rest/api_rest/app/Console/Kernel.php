@@ -28,8 +28,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-
-        $schedule->call(BalizaController::obtenerDatos())->everyTenMinutes();
+        $schedule->call(function(){
+            BalizaController::obtenerDatos();
+        })->everyTenMinutes();
     }
 
     /**

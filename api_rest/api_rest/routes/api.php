@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\BalizaController;
 use App\Models\Baliza;
+use App\Http\Controllers\PeticionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('balizas',[BalizaController::class,'index']);
-Route::get('balizas/{baliza}',[BalizaController::class,'show']);
-Route::post('balizas',[BalizaController::class,'store']);
-Route::put('balizas/{baliza}',[BalizaController::class,'update']);
-Route::delete('balizas/{baliza}',[BalizaController::class,'delete']);
+Route::post("register", [UserController::class, "register"]);
+Route::post("login", [UserController::class, "login"]);
+Route::get('balizas',[BalizaController::class,'index'])/*->middleware('auth:sanctum')*/;
+
+Route::middleware('auth:api')->group(function() {
+
+    Route::get('balizas/{baliza}',[BalizaController::class,'show']);
+    Route::get("user", [UserController::class, "user"]);
+    Route::resource('peticion', PeticionController::class);
+});

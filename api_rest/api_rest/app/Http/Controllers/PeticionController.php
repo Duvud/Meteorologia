@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class PeticionesController extends Controller
+class PeticionController extends Controller
 {
     /**
      * Display a listing of the resource.

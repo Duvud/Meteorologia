@@ -1,15 +1,45 @@
-/*Definimos un height para el div del mapa de leaflet*/
+
+#dMapa, h1,h2,h4,h5{
+    margin: 5vh auto;
+    text-align: center;
+}
+
 #dMapa{
     height: 60vh;
     width: 60%;
-    margin: auto;
     border: solid black 2px;
 }
+
+#dPopButton,#bMostrarDatos{
+    margin: auto;
+    background-color: #97e9ff;
+    border-radius: 4px;
+    border-color: black;
+}
+
+#dParteinferior{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 #dPaneles{
-    height: 30vh;
+    height: auto;
     width: auto;
-    max-width: 80%;
+    max-width: 50%;
     margin: 5vh auto;
-    border: solid black 2px;
+    border: solid white 2px;
     border-radius: 5px;
+}
+
+.dBalizaElegida{
+    border: solid #504cd2 2px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+
+
+}
+
+.leaflet-popup-content{
+    text-align: center;
 }

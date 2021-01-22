@@ -17,7 +17,6 @@ class BalizaController extends Controller
         $arDatosExtra = new ArrayObject();
         $i =0;
         foreach($jsonNombres as $datosBaliza){
-
             if($datosBaliza->stationType == "METEOROLOGICAL")
                 $arDatosExtra->append(array("id"=>$datosBaliza->id,"nombre"=>$datosBaliza->name,"provincia"=>$datosBaliza->province,"y"=>$datosBaliza->y,"z"=>$datosBaliza->x,"tipo"=>$datosBaliza->stationType));
         }
@@ -100,7 +99,7 @@ class BalizaController extends Controller
                     }
                 }
             }
-            $datosFinal = [$idBaliza,$balizas[$i]["nombre"],$balizas[$i]["provincia"],$temperatura,$precipitacion,$humedad,$velocidad,$balizas[$i]["y"],$balizas[$i]["z"]];
+            $datosFinal = [$idBaliza,$balizas[$i]["nombre"],$balizas[$i]["provincia"],$temperatura,$precipitacion,$humedad,$velocidad,$balizas[$i]["y"],$balizas[$i]["z"],date("Y-m-d H:m:s" )];
             array_push($arrayDatosBalizas,$datosFinal);
         }
         //print_r($arrayDatosBalizas);
@@ -108,19 +107,17 @@ class BalizaController extends Controller
     }
 
     public static function procesarDatos($datosFinal){
+        $datosOrdenados = [];
         foreach($datosFinal as $dato){
-            (new \App\Models\Baliza)->updateOrCreate(
-                [
-                    'id'=> $dato[0]
-                ],
-                [
-                    "nombre" => $dato[1] ,"provincia" => $dato[2], "temperatura" => $dato[3],
+                $datoOrdenado =
+                    [
+                    "id" => $dato[0],"nombre" => $dato[1] ,"provincia" => $dato[2], "temperatura" => $dato[3],
                     'precipitacion' => $dato[4], 'humedad' => $dato[5], 'velocidad' => $dato[6],
                     'y' => $dato[7], 'z' => $dato[8]
-                ]
-            );
+                ];
+                array_push($datosOrdenados,$datoOrdenado);
         }
-        //(new \App\Models\Baliza)->upsert($datosFinal,'id');
+        (new \App\Models\Baliza)->upsert($datosOrdenados,'id');
     }
 
     //Devuelve todas las balizas

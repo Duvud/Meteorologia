@@ -11,18 +11,23 @@
     <title>MeteoMax - Balizas</title>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <h1>MeteoMax - Balizas</h1>
     <h4>Mapa</h4>
     <div id="dMapa"></div>
-    <h4>Paneles meteorológicos</h4>
-    <div id="dPaneles">
+    <h5>Paneles meteorológicos elegidos</h5>
+    <div id="dParteinferior">
+        <div id="dPaneles">
+        </div>
+        <button id="bMostrarDatos">Mostrar Datos</button>
     </div>
+    <div id="dDatos"></div>
     <script src="mapa.js"></script>
     <script src="datos.js"></script>
     <script src="main.js"></script>

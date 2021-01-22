@@ -3,8 +3,6 @@
 namespace App\Console;
 
 use App\Http\Controllers\BalizaController;
-use App\Http\Controllers\prueba2;
-use App\Http\Controllers\prueba5;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -26,13 +24,15 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
+    //Para iniciar esto en development, hay que ejecutar el comando php artisan schedule:work
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function(){
+            //Llamamos a la función que se encarga de organizar y actualizar los datos
+            //de la base de datos
             BalizaController::obtenerDatos();
         })->everyTenMinutes();
     }
-
     /**
      * Register the commands for the application.
      *
@@ -41,7 +41,6 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }

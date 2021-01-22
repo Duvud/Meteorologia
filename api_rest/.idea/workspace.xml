@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/Meteorologia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Meteorologia.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_rest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Models/Baliza.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Models/Baliza.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_rest/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/database/migrations/2021_01_12_102527_create_balizas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_rest/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/datos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/datos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/mapa.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +140,7 @@
       <path value="$PROJECT_DIR$/api_rest/vendor/psr/container" />
       <path value="$PROJECT_DIR$/api_rest/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/api_rest/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/api_rest/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mvMVecpxALWEtcxaQdoXHrGOMI" />
@@ -180,7 +191,7 @@
       <workItem from="1610906428427" duration="7441000" />
       <workItem from="1610964826390" duration="8662000" />
       <workItem from="1610989911515" duration="2951000" />
-      <workItem from="1611046185399" duration="53056000" />
+      <workItem from="1611046185399" duration="65350000" />
     </task>
     <servers />
   </component>

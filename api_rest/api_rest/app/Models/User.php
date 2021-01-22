@@ -38,9 +38,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-
-
-    public function peticion(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function peticiones(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany('App\Models\Peticiones');
     }

@@ -17,4 +17,9 @@ class Baliza extends Model
     protected $table = 'baliza';
     protected $fillable = ['id','nombre','provincia','temperatura','precipitacion','humedad','velocidad','y','z'];
     use HasFactory;
+
+    public function peticiones(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany('App\Models\Peticiones');
+    }
 }

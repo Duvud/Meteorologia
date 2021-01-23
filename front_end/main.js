@@ -4,9 +4,8 @@ var arCargados = [];
 
 $( function() {
     $("#dDatos").hide();
-    $("#dParteinferior").hide();
+    $("#bMostrarDatos").hide();
 });
-
 
 //Esta funcion añade una baliza a la lista de balizas del usuario
 function AnadirBaliza(sNombreBaliza){
@@ -19,12 +18,15 @@ function AnadirBaliza(sNombreBaliza){
                 arAnadidas.push(sData[i].nombre);
                 bEncontrado = true;
                 iAnadidas++;
-                if(iAnadidas>0){
-                    $("#dPaneles").css('border-color','black');
-                    $("#dParteinferior").slideDown();
+                if(iAnadidas -1 === 0){
+                    $("#dPaneles").css('border-color','#6c6c92');
                 }
-
-                $("#dPaneles").prepend(`<div class="dBalizaElegida p-1 col-md-2 col-lg-2 col-sm-12">${sData[i].nombre}</div>`)
+                $("#dPaneles").prepend(`<div class="dBalizaElegida p-1 col-md-12 col-lg-2 col-sm-12 col-12">${sData[i].nombre}</div>`)
+                $("#bMostrarDatos").slideDown();
+                if(iAnadidas -1 === 0 ){
+                    var scrollDiv = document.getElementById("bMostrarDatos").offsetTop;
+                    window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+                }
             }else{
                 i++
             }

@@ -1,4 +1,4 @@
-var mymap = L.map('dMapa').setView([43.0000000,-2.7500000], 8.3);
+var mymap = L.map('dMapa').setView([43.0000000,-2.7500000], 8.46);
 var marcElegido = "";
 
 //Token de acceso para la api mapbox de layer de leaflet : pk.eyJ1IjoiaWswMTIxMDhid2QiLCJhIjoiY2trNGQwdnBuMDA5cDMwbGs0cnlteWg0MyJ9.2cp-rcBCo0NdVScVmFZMWw

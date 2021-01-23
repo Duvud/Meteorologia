@@ -1,7 +1,10 @@
-
 #dMapa, h1,h2,h4,h5{
     margin: 5vh auto;
     text-align: center;
+}
+
+body{
+    background-color: #c0c0ff;
 }
 
 #dMapa{
@@ -10,11 +13,18 @@
     border: solid black 2px;
 }
 
-#dPopButton,#bMostrarDatos{
+#dPopButton{
     margin: auto;
     background-color: #97e9ff;
     border-radius: 4px;
     border-color: black;
+}
+
+#bMostrarDatos{
+    background-color: #f7fef6;
+    margin: auto;
+    border-radius: 4px;
+    border: solid #3c3c51 2px;
 }
 
 #dParteinferior{
@@ -27,17 +37,17 @@
     width: auto;
     max-width: 50%;
     margin: 5vh auto;
-    border: solid white 2px;
+    border: solid #36364b 2px;
     border-radius: 5px;
+    background-color: #95a9cc;
 }
 
 .dBalizaElegida{
-    border: solid #504cd2 2px;
+    border: solid #2c3d63 2px;
+    background-color: #d3e0ff;
     border-radius: 3px;
     text-align: center;
     display: inline-block;
-
-
 }
 
 .leaflet-popup-content{

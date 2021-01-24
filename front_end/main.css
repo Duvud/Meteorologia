@@ -42,6 +42,27 @@ body{
     background-color: #95a9cc;
 }
 
+#dTablaDatos{
+    text-align: center;
+    display: inline-block;
+    height: 3vh;
+    height: auto;
+    border: solid black 1px;
+    border-radius: 3px;
+    padding: 0.1em;
+
+}
+
+#dOpcionesDatos{
+    text-align: center;
+    display: inline-block;
+    height: auto;
+}
+
+#dDatos{
+    text-align: center;
+}
+
 .dBalizaElegida{
     border: solid #2c3d63 2px;
     background-color: #d3e0ff;
@@ -49,6 +70,19 @@ body{
     text-align: center;
     display: inline-block;
 }
+
+.dConfDatos{
+    border: solid #2c3d63 2px;
+    background-color: #d3e0ff;
+    border-radius: 3px;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
+    padding: 0.1em;
+    text-align: center;
+    display: inline-block;
+}
+
 
 .leaflet-popup-content{
     text-align: center;

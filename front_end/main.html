@@ -18,18 +18,23 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>MeteoMax - Balizas</h1>
-    <h4>Mapa</h4>
-    <div id="dMapa"></div>
-    <h5 id="prueba">Paneles meteorológicos elegidos</h5>
-    <div id="dParteinferior">
-        <div id="dPaneles">
+    <h1 id="sTitulo">MeteoMax - Balizas</h1>
+    <div id="dEditar">
+        <h4>Mapa</h4>
+        <div id="dMapa"></div>
+        <h5 id="prueba">Paneles meteorológicos elegidos</h5>
+        <div id="dParteinferior">
+            <div id="dPaneles">
+            </div>
+            <button onclick="MostrarDatos()" id="bMostrarDatos">Mostrar Datos</button>
         </div>
-        <button id="bMostrarDatos">Mostrar Datos</button>
     </div>
-    <div id="dDatos"></div>
-    <script src="mapa.js"></script>
+    <div id="dDatos">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 m-auto" id="dTablaDatos"><h6>Arrastra aquí los diferentes datos para verlos</h6></div>
+        <div  class="col-lg-3 col-md-4 col-sm-10 col-10 m-auto" id="dOpcionesDatos"></div>
+    </div>
     <script src="datos.js"></script>
+    <script src="mapa.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

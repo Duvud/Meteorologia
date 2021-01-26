@@ -21,7 +21,7 @@ body{
     border-color: ghostwhite;
 }
 
-#bMostrarDatos,#bGuardarBalizas{
+#bMostrarDatos,#bGuardarBalizas,#bCerrarSesion,#bEditarBalizas{
     background-color: #f7fef6;
     margin: auto;
     border-radius: 4px;

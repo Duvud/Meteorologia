@@ -102,7 +102,6 @@ class BalizaController extends Controller
             $datosFinal = [$idBaliza,$balizas[$i]["nombre"],$balizas[$i]["provincia"],$temperatura,$precipitacion,$humedad,$velocidad,$balizas[$i]["y"],$balizas[$i]["z"],date("Y-m-d H:m:s" )];
             array_push($arrayDatosBalizas,$datosFinal);
         }
-        //print_r($arrayDatosBalizas);
         self::procesarDatos($arrayDatosBalizas);
     }
 

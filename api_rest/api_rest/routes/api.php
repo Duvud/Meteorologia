@@ -19,11 +19,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::post("register", [UserController::class, "register"]);
 Route::post("login", [UserController::class, "login"]);
-Route::get('balizas',[BalizaController::class,'index'])/*->middleware('auth:sanctum')*/;
+Route::get('balizas',[BalizaController::class,'index'])->middleware('auth:sanctum');
+Route::get('balizas/{baliza}',[BalizaController::class,'show'])->middleware('auth:sanctum');
+Route::get('peticiones', [PeticionController::class,'Index'])->middleware('auth:sanctum');
+Route::get('peticiones/almacenar', [PeticionController::class,'Store'])->middleware('auth:sanctum');
+Route::get('peticiones/eliminar', [PeticionController::class,'Destroy'])->middleware('auth:sanctum');
 
 Route::middleware('auth:api')->group(function() {
-
-    Route::get('balizas/{baliza}',[BalizaController::class,'show']);
     Route::get("user", [UserController::class, "user"]);
-    Route::resource('peticion', PeticionController::class);
 });

@@ -1,12 +1,19 @@
+
 var iAnadidas = 0;
 var arAnadidas = [];
 var arCargados = [];
 var arOpcionesMostrar = [];
 var arOpcionesMostrarParse = []; //Opciones parseadas para coincidir con los datos del backend
+
+//Comprobamos que no esté intentando entrar una persona no autorizada
+
+
 $( function() {
     $("#dDatos").hide();
     $("#bMostrarDatos").hide();
 });
+
+
 
 //Esta funcion añade una baliza a la lista de balizas del usuario
 function AnadirBaliza(sNombreBaliza){
@@ -22,7 +29,7 @@ function AnadirBaliza(sNombreBaliza){
                 if(iAnadidas -1 === 0){
                     $("#dPaneles").css('border-color','#6c6c92');
                 }
-                $("#dPaneles").prepend(`<div class="dBalizaElegida p-1 col-md-12 col-lg-2 col-sm-12 col-12">${sData[i].nombre}</div>`)
+                $("#dPaneles").prepend(`<div id="${sData[i].nombre}" onclick="EliminarBaliza('${sData[i].nombre}')" class="dBalizaElegida p-1 col-md-12 col-lg-2 col-sm-12 col-12">${sData[i].nombre}</div>`)
                 $("#bMostrarDatos").slideDown();
                 if(iAnadidas -1 === 0 ){
                     var scrollDiv = document.getElementById("bMostrarDatos").offsetTop;
@@ -36,11 +43,15 @@ function AnadirBaliza(sNombreBaliza){
 }
 
 function EliminarBaliza(sNombreBaliza){
+    alert(ComprobarExistencia(sNombreBaliza));
     if(ComprobarExistencia(sNombreBaliza) !== -1){
         let iPos = ComprobarExistencia(sNombreBaliza);
         if(iPos !== -1){
-            sData.splice(iPos,1);
+            EliminarPeticionBaliza(arCargados[iPos].id);
+            arAnadidas.splice(iPos,1);
+            arCargados.splice(iPos,1);
             iAnadidas--;
+            $(`#${sNombreBaliza}`).slideUp();
         }
     }
 }
@@ -72,24 +83,25 @@ function MostrarDatos(){
           drop: function( event, ui ) {
               //$(ui.draggable).text();
               if(arOpcionesMostrar.length === 0){
-                  $(ui.draggable).css('background-color','#EDEE46');
+                  $(ui.draggable).css('background-color','#004404');
                   arOpcionesMostrar.push($(ui.draggable).text());
                   AnadirOpcionesParseadas($(ui.draggable).text());
                   CargarDatos();
               }else{
                   if(!arOpcionesMostrar.includes($(ui.draggable).text())){
-                      $(ui.draggable).css('background-color','#EDEE46');
+                      $(ui.draggable).css('background-color','#004406');
                       arOpcionesMostrar.push($(ui.draggable).text());
                       AnadirOpcionesParseadas($(ui.draggable).text());
                       CargarDatos()
                   }else{
-                      $(ui.draggable).css('background-color','#d3e0ff');
+                      $(ui.draggable).css('background-color','#390001');
                       arOpcionesMostrar.splice(arOpcionesMostrar.indexOf((ui.draggable).text()),1);
                       EliminarOpcionesParseadas();
                       CargarDatos();
                       if(arOpcionesMostrar.length === 0 ){
                           $(".tablaDatos").remove()
                           $("#dTablaDatos").prepend("<h6>Arrastra aquí los diferentes datos para verlos</h6>");
+                          $("#dTablaDatos").css('border','solid whitesmoke 1px');
                       }
                       //!arOpcionesMostrar.includes($(ui.draggable).text()
                   }
@@ -129,11 +141,12 @@ function EliminarOpcionesParseadas(texto){
 
 function CargarDatos(){
     $("#dTablaDatos h6").remove();
+    $("#dTablaDatos").css('border','none');
     $(".tablaDatos").remove();
     sTabla = "";
     sTabla += "<table class='tablaDatos'>";
         sTabla += "<tr>";
-            sTabla += "<th>Nombre Baliza</th>";
+            sTabla += "<th>Nombre</th>";
             for(let i=0;i<arOpcionesMostrar.length;i++){
                 sTabla += `<th>${arOpcionesMostrar[i]}</th>`;
             }

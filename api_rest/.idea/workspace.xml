@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04bbfade-4fec-488b-8ce2-6ebb890a1097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front_end/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front_end/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front_end/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front_end/registro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/BalizaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Http/Controllers/PeticionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Http/Controllers/PeticionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/app/Models/Peticion.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/app/Models/Peticion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_rest/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_rest/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/datos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/datos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +181,9 @@
       <workItem from="1611046185399" duration="80294000" />
       <workItem from="1611409893768" duration="1611000" />
       <workItem from="1611525880090" duration="11000" />
-      <workItem from="1611597203095" duration="12962000" />
+      <workItem from="1611597203095" duration="13559000" />
+      <workItem from="1611759666064" duration="326000" />
+      <workItem from="1611776549044" duration="775000" />
     </task>
     <servers />
   </component>

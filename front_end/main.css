@@ -103,8 +103,16 @@ body{
 Login css --------------------------
 
 **/
+
+#dTextoDescriptivo{
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 102%;
+}
+
+
 div form{
-    margin: 4em auto;
+    margin: 8vh auto;
     width: 100%;
     text-align: center;
 }

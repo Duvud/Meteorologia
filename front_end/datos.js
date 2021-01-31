@@ -2,6 +2,8 @@ var userToken = ConsultarCookie("token");
 var sPeticiones = "";
 var sData = "";
 var bFirstUpdate = true;
+
+//Esta función carga los datos de todas las balizas y las peticiones del usuario logueado
 function GetData (){
     if(userToken !== undefined){
         $.ajax({
@@ -39,6 +41,7 @@ function GetData (){
     }
 }
 
+//Esta función carga en el frontend las balizas escogidas anteriormente por el usuario
 function ActualizarConfiguracion(){
     if(sPeticiones.status !== "failed"){
         for(let i=0;i<sPeticiones.data.length;i++){
@@ -50,7 +53,6 @@ function ActualizarConfiguracion(){
                     xhr.setRequestHeader('Accept', 'application/json');
                 },
                 success: function (response){
-                    console.log(response);
                     AnadirBaliza(response.nombre);
                 },
                 error: function (response) {
@@ -61,6 +63,7 @@ function ActualizarConfiguracion(){
     }
 }
 
+//Almacena las balizas elegidas por el usuario en la base de datos
 function GuardarBalizas() {
     for (let i = 0; i < arCargados.length; i++) {
         $.ajax({
@@ -74,11 +77,7 @@ function GuardarBalizas() {
                 xhr.setRequestHeader('Authorization', 'Bearer ' + userToken);
                 xhr.setRequestHeader('Accept', 'application/json');
             },
-            success: function (response){
-                console.log(response);
-            },
             error: function (response) {
-                console.log(response);
                 console.log("No se ha podido guardar la configuración");
             }
         });
@@ -107,6 +106,7 @@ function EliminarPeticionBaliza(sIdBaliza){
     });
 }
 
+//Consigue una cookie
 function ConsultarCookie(nombre) {
     var buscamos = nombre + "=";
     if (document.cookie.length > 0) {

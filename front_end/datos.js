@@ -15,7 +15,7 @@ function GetData (){
             },
             success: function (response){
                 sData = response;
-                GenerateMarkers();
+                GenerateMap();
             }
         });
         $.ajax({

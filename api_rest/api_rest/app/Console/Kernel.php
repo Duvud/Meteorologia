@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
             //Llamamos a la función que se encarga de organizar y actualizar los datos
             //de la base de datos
             BalizaController::obtenerDatos();
-        })->everyTenMinutes();
+        })->everyThreeMinutes();
     }
     /**
      * Register the commands for the application.
